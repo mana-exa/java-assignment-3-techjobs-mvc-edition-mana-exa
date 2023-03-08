@@ -230,5 +230,10 @@ public class JobData {
         return allCoreCompetency;
     }
 
+    public static Object getAllJobs() {
+        loadData();
+        allJobs.sort(new NameSorter());
+    return allJobs;
+    }
 }
 

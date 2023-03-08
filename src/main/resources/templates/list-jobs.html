@@ -10,7 +10,69 @@
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
+<!--    <table class="listjobs" th:each="jobs : ${jobs}">-->
+<!--        <tr>-->
+<!--            <td>ID</td>-->
+<!--            <td th:text="${job.ID}"></td>&ndash;&gt;-->
+<!--            <td>Employer</td>-->
+<!--            <td th:text="${jobs.employer}"></td>-->
+<!--            <td>Location</td>-->
+<!--            <td th:text="${jobs.location}"></td>-->
+<!--            <td>Position Type</td>-->
+<!--            <td th:text="${jobs.positionType}"></td>-->
+<!--            <td>CoreCompetency</td>-->
+<!--            <td th:text="${jobs.coreCompetency}"></td>-->
+<!--        </tr>-->
+
+<!--    </table>-->
+
     <!-- TODO #1 - Use a loop to display job results in a table. -->
+
+    <table class="job-listing" th:each="job : ${jobs}" th:fragment="job-table" >
+
+        <tr>
+            <td>ID</td>
+            <td th:text=${job.id}></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td th:text=${job.name}></td>
+        </tr>
+        <tr>
+            <td>Employer</td>
+            <td th:text=${job.employer}></td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td th:text=${job.location}></td>
+        </tr>
+        <tr>
+            <td>Position Type</td>
+            <td th:text=${job.positionType}></td>
+        </tr>
+        <tr>
+            <td>Core Competency</td>
+            <td th:text=${job.coreCompetency}></td>
+        </tr>
+
+
+<!--        <tr>-->
+<!--            <td th:text="${jobs.name}"></td>-->
+<!--            <td th:text="${jobs.employer}"></td>-->
+<!--            <td th:text="${jobs.location}"></td>-->
+<!--            <td th:text="${jobs.positionType}"></td>-->
+<!--            <td th:text="${jobs.coreCompetency}"></td>-->
+<!--        </tr>-->
+
+
+<!--        </tr>-->
+
+<!--        private String name;-->
+<!--        private Employer employer;-->
+<!--        private Location location;-->
+<!--        private PositionType positionType;-->
+<!--        private CoreCompetency coreCompetency;-->
+    </table>
 
 </div>
 
